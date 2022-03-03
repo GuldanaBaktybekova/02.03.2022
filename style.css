@@ -1,26 +1,133 @@
-/* Block - Accordion */
-
-.accordion {
-border: 1px solid lightgray;
-border-radius: .5rem;
-overflow: hidden;
+* {
+  box-sizing: border-box;
+}
+.modal {
+  display: none;
 }
 
-/* Element - Header */
+.modal.modal--open {
+  display: block;
+}
+
+.modal__backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.modal__window {
+  
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal__content {
+  background-color: white;
+  max-width: 350px;
+  margin: 1rem;
+  border-radius: .5rem;
+  padding: 0 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Block -  Accordion */
+.accordion {
+  border: 1px solid lightgray;
+  border-radius: .5rem;
+  overflow: hidden;
+
+}
+/* Element -  Header */
 .accordion__header {
-  padding: .5rem 1rem;
-  background-color: rgb(254, 248, 240);
+  padding: .5rem;
+  
   font-weight: bold;
   cursor: pointer;
 }
-/* Element - Content */
+/* Element -  Content */
 .accordion__content {
   border-top: 1px solid lightgray;
   padding: .5rem 1rem;
   display: none;
 }
+/* Modifier - Open */
+.accordion--open .accordion__header {
+  background-color: rgb(253, 203, 219);
+}
 
-/* Modifer - Open */
+
 .accordion--open .accordion__content {
   display: block;
+}
+
+.accordions .accordion:not(:first-of-type) {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top: none;
+}
+.accordions .accordion:not(:last-of-type) {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Block */
+/* Element */
+.button {
+  background-color: rgb(109, 45, 136);
+  border-radius: 1rem;
+  padding: 0.5rem 2rem;
+  color: white;
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  text-decoration: none;
+  border: none;
+  display: inline-block;
+  cursor: pointer;
+}
+.button--outlined {
+  border: 2px solid rgb(109, 45, 136);
+  color: rgb(109, 45, 136);
+  background-color: white;
+}
+.button--danger {
+  background-color: rgb(228, 98, 98);
+}
+.button--outlined.button--danger {
+  border-color: rgb(228, 98, 98);
+  color: rgb(228, 98, 98);
+  background-color: white;
 }
