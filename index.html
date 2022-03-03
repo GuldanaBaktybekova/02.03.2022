@@ -5,11 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
-    <title>Document</title>
+    <title>Modifier</title>
   </head>
   <body>
+    <div class="modal modal--open">
+      <div class="modal__backdrop"></div>
+      <div class="modal__window">
+        <div class="modal__header">Bishkek</div>
+        <div class="modal__content">Bishkek formerly Pishpek and Frunze, is the capital and largest city
+          of Kyrgyzstan. Bishkek is also the administrative centre of the Chüy
+          Region.</div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <div class="accordions accordions--toggle">
-      <div class="accordion">
+      <div class="accordion accordion--open">
         <div class="accordion__header">Bishkek</div>
         <div class="accordion__content">
           Bishkek formerly Pishpek and Frunze, is the capital and largest city
@@ -42,6 +69,14 @@
         </div>
       </div>
     </div>
+
+    <br /><br /><br /><br /><br />
+
+    <button class="button button--outlined" data-modal="bishkek-modal">
+      Hello world
+    </button>
+    <a class="button button--danger" href="">Hello world</a>
+    <div class="button button--outlined button--danger">Hello world</div>
 
     <script src="./script.js"></script>
   </body>
